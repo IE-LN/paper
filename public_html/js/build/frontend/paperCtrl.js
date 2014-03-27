@@ -7,3 +7,4 @@ function PaperCtrl($scope){
 	console.log('test');
 }
 
+PaperCtrl.$inject = ['$scope'];
