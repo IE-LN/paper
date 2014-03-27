@@ -4,5 +4,6 @@
 
 function PaperCtrl($scope){
 	$scope.data = {message: "Hello Kitties"};
+	console.log('test');
 }
 
