@@ -22,7 +22,7 @@ module.exports = function(grunt){
 		},
 		watch: {
 			scripts: {
-				files: ['js/build/**/*.js', 'css/build/**/*.css'],
+				files: ['public_html/js/build/**/*.js', 'public_html/css/build/**/*.css'],
 				tasks: ['uglify', 'cssmin'],
 				options: {
 				  spawn: false
