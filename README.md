@@ -1,4 +1,0 @@
-paper
-=====
-
-Paper webapp prototype

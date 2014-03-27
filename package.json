@@ -1,0 +1,14 @@
+{
+    "name" : "press.insomniac.com",
+    "version" : "1.0.0",
+    "author" : "Insomniac Tech",
+    "private" : true,
+    "devDependencies" : {
+        "grunt": 					"*",
+        "grunt-contrib-cssmin":     "*",
+        "grunt-contrib-concat":		"*",
+        "grunt-contrib-uglify":     "*",
+        "grunt-contrib-watch":      "*",
+        "matchdep":                 "*"
+    } 
+}
