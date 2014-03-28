@@ -1,9 +1,32 @@
 @charset "utf-8";
 /* CSS Document */
 
-.page {
-	width:1024px;
+.wrapper {
+	width:1104px;
 	height:768px;
 	margin:35px auto 35px auto;
+}
+
+#prev, #next {
+	display:inline-block;
+	width:40px;
+	height:100%;
+	background-color:red;
+}
+
+.page {
+	position:relative;
+	display:inline-block;
+	width:1024px;
+	height:768px;
 	background-color:black;
+}
+
+.box {
+	width:50px;
+	height:45px;
+	background-color:blue;
+	position:absolute;
+	top:40px;
+	left:490px;
 }

@@ -1,7 +1,3 @@
-/*papermvc.controller('PaperCtrl', function PaperCtrl($scope) {
-	$scope.data = {message: "Hello Kitties"};
-});*/
-
 function PaperCtrl($scope){
 	$scope.data = {message: "Hello Kitties"};
 	console.log('test');
@@ -10,7 +6,23 @@ function PaperCtrl($scope){
 papermvc.directive("modalContainer", function () {
 	return {
 		restrict: "E",
-		template: "<div class='page'>Bam! Modal Power!</div>"
+		template: "<div class='wrapper'><div id='prev' prev></div><div class='page'><div class='box'></div></div><div id='next' next></div></div>"
+	}
+})
+
+papermvc.directive("prev", function () {
+	return function ( scope, element ) {
+		element.bind('mousedown', function(){
+			console.log('flip back!');
+		})
+	}
+})
+
+papermvc.directive("next", function () {
+	return function ( scope, element ) {
+		element.bind('mousedown', function(){
+			console.log('flip forward!');
+		})
 	}
 })
 
