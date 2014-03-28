@@ -1,27 +1,27 @@
 function PaperCtrl($scope){
-	$scope.data = {message: "Hello Kitties"};
-	console.log('test');
+	
+	$scope.data = {message: "Hello Kitties!"};
+	
+	$scope.prev = function () {
+		console.log('flip back!');
+	}
+	
+	$scope.next = function () {
+		console.log('flip forward!');
+	}
 }
 
 papermvc.directive("modalContainer", function () {
 	return {
 		restrict: "E",
-		template: "<div class='wrapper'><div id='prev' prev></div><div class='page'><div class='box'></div></div><div id='next' next></div></div>"
+		template: "<div class='wrapper'><div id='prev' flip-button='prev()'></div><div class='page'><div class='box'></div></div><div id='next' flip-button='next()'></div></div>"
 	}
 })
 
-papermvc.directive("prev", function () {
-	return function ( scope, element ) {
-		element.bind('mousedown', function(){
-			console.log('flip back!');
-		})
-	}
-})
-
-papermvc.directive("next", function () {
-	return function ( scope, element ) {
-		element.bind('mousedown', function(){
-			console.log('flip forward!');
+papermvc.directive("flipButton", function () {
+	return function ( scope, element, attrs ) {
+		element.bind('mousedown', function () {
+			scope.$apply(attrs.flipButton)
 		})
 	}
 })
