@@ -20,6 +20,40 @@
 	width:1024px;
 	height:768px;
 	background-color:black;
+	overflow:hidden;
+}
+
+#current-page1, #current-page2 {
+	content:url(../images/Penguins.jpg);
+	z-index:900;
+}
+
+#prev-page1, #prev-page2 {
+	content:url(../images/Desert.jpg);
+	z-index:500;
+}
+
+#next-page1, #next-page2{
+	content:url(../images/Koala.jpg);
+	z-index:100;
+}
+
+#current-page1, #prev-page1, #next-page1 {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:512px;
+	height:768px;
+	overflow:hidden;
+}
+
+#current-page2, #prev-page2, #next-page2 {
+	position:absolute;
+	top:0px;
+	left:512px;
+	width:512px;
+	height:768px;
+	overflow:hidden;
 }
 
 #box {
@@ -29,4 +63,28 @@
 	position:absolute;
 	top:40px;
 	left:490px;
+	z-index:1000;
+}
+
+.move-right, .move-left {
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.move-right {
+	-webkit-transform: translate(5em,0);
+    -moz-transform: translate(5em,0);
+    -o-transform: translate(5em,0);
+    -ms-transform: translate(5em,0);
+    transform: translate(5em,0);
+}
+
+.move-left {
+	-webkit-transform: translate(-5em,0);
+    -moz-transform: translate(-5em,0);
+    -o-transform: translate(-5em,0);
+    -ms-transform: translate(-5em,0);
+    transform: translate(-5em,0);
 }
