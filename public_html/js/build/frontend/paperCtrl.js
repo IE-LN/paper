@@ -7,7 +7,7 @@ function PaperCtrl($scope){
 papermvc.directive('modalContainer', function () {
 	return {
 		restrict: 'E',
-		template: '<div class="wrapper"><div id="prev" prev-button></div><div class="page"><div id="box"></div><div id="current-page1"></div><div id="current-page2"></div><div id="next-page1"></div><div id="next-page2"></div><div id="prev-page1"></div><div id="prev-page2"></div></div><div id="next" next-button></div></div>'
+		template: '<div class="wrapper"><div id="prev" prev-button></div><div class="page"><div id="box"></div><div id="page1-left"></div><div id="page2-right"></div><div id="page2-left"></div><div id="page1-right"></div></div><div id="next" next-button></div></div>'
 	}
 })
 
@@ -29,6 +29,10 @@ papermvc.directive('prevButton', function () {
 			
 			var b = document.getElementById('box');
 			b.className = 'move-left';
+			
+			var f = document.getElementById('page1-right');
+			f.className = 'flip-backward';
+
 		})
 	}
 })
@@ -41,6 +45,9 @@ papermvc.directive('nextButton', function () {
 			
 			var b = document.getElementById('box');
 			b.className = 'move-right';
+			
+			var f = document.getElementById('page1-right');
+			f.className = 'flip-forward';
 		})
 	}
 })
