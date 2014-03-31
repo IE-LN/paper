@@ -48,6 +48,9 @@ papermvc.directive('nextButton', function () {
 			
 			var f = document.getElementById('page1-right');
 			f.className = 'flip-forward';
+			
+			var d = document.getElementById('page2-left');
+			d.className = 'flip-forward';
 		})
 	}
 })

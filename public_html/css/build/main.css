@@ -20,7 +20,10 @@
 	width:1024px;
 	height:768px;
 	background-color:black;
-	overflow:hidden;
+	/*overflow:hidden;*/
+	-webkit-perspective:1200px;
+	-webkit-perspective-origin:50% 50%;
+
 }
 
 #page1-left, #page1-right {
@@ -57,11 +60,17 @@
 
 #page2-left {
 	z-index:11;
+	-webkit-transform-origin:100%;
+	-webkit-transform:rotateY(180deg);
+	top:0px;
+	left:0px;
+	display:none;
 }
 
 #page1-right {
 	z-index:12;
 	background-position:right;
+	-webkit-transform-style:preserve-3d;
 }
 
 #box {
