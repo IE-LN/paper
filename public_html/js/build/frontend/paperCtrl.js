@@ -32,6 +32,10 @@ papermvc.directive('prevButton', function () {
 			
 			var f = document.getElementById('page1-right');
 			f.className = 'flip-backward';
+			
+			var d = document.getElementById('page2-left');
+			d.className = 'flip-backward';
+
 
 		})
 	}
