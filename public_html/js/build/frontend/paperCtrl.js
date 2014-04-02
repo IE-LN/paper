@@ -21,6 +21,25 @@ papermvc.directive('flipButton', function () {
 	}
 })
 
+
+
+/*
+
+papermvc.directive('modalNav', ['Modal', function(Modal) {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			console.log('here');
+		}
+	}
+}]);
+
+
+
+*/
+
+
+
 papermvc.directive('prevButton', function () {
 	return function ( scope, element, attrs ) {
 		element.bind('mousedown', function () {

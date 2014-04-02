@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="papermvc" data-framework="angularjs">
+<html lang="en" data-ng-app="papermvc" data-framework="angularjs">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,17 @@
 		<script type="text/javascript" src="js/main.min.js"></script>
 	</head>
 	<body>
-    	<div ng-controller="PaperCtrl">
-        	{{data.message}}
-        
-        	<modal-container></modal-container>
+    	<div data-ng-controller="PaperCtrl">
+        	<!-- <modal-container></modal-container> -->
+        	
+        	
+        	<div id="modal">
+        		<div id="modal-wrapper">
+	        		<button id="modal-prev" class="modal-button" data-ng-click="prev()">Prev</button>
+	        		<div id="modal-content"></div>
+	        		<button id="modal-next" class="modal-button" data-ng-click="next()">Next</button>
+        		</div>    		
+        	</div>
         </div>
 	</body>
 </html>
