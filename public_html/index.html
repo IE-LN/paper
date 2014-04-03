@@ -12,13 +12,17 @@
         	<!-- <modal-container></modal-container> -->
         	
         	
-        	<div id="modal">
+        	
+        	<button data-ng-click="modal('open')">Show Modal</button>
+        	
+        	<modal id="modal" data-ng-show="modalObj.visible">
         		<div id="modal-wrapper">
 	        		<button id="modal-prev" class="modal-button" data-ng-click="prev()">Prev</button>
 	        		<div id="modal-content"></div>
 	        		<button id="modal-next" class="modal-button" data-ng-click="next()">Next</button>
-        		</div>    		
-        	</div>
+        		</div>  
+        		<modal-overlay class="modal-overlay"></modal-overlay>  		
+        	</modal>
         </div>
 	</body>
 </html>

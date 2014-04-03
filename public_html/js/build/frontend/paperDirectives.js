@@ -1,3 +1,39 @@
+papermvc.directive('modal', [function() {
+	return {
+		restrict: 'E',
+		link: function(scope, element, attrs) {
+/*
+			element.bind('click', function() {
+				console.log('here');
+			});
+*/
+			/*
+document.getElementById(element).onclick(function() {
+				console.log('here');
+			})
+*/
+		}
+	}
+}]);
+
+
+papermvc.directive('modalOverlay', [function() {
+	return {
+		restrict: 'E',
+		link: function(scope, element, attrs) {
+			element.bind('click', function() {
+				scope.$apply("modal('close')");
+			});
+		}	
+	}
+}]);
+
+
+
+
+
+
+
 
 papermvc.directive('modalContainer', function () {
 	return {
